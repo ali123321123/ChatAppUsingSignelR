@@ -1,4 +1,4 @@
-﻿var connection = new SignalRHubConnectionBuilder().withUrl("/chatHub");
+﻿var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
 connection.on("RecieveMessage", function (fromUser, message) {
     var msg = fromUser + ":" + "" + message;
     var li = document.createElement("li");
